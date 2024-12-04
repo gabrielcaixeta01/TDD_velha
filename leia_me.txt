@@ -1,0 +1,37 @@
+﻿Como Compilar e Executar o Programa
+	1.	Pré-requisitos
+        • Certifique-se de ter o g++ instalado em seu sistema. Ele é necessário para compilar o código.
+        • O Catch2 é utilizado para realizar os testes automatizados, portanto, o arquivo catch_amalgamated.hpp deve estar presente e corretamente incluído no projeto.
+	2.	Compilação
+
+    Para compilar o programa, basta rodar o seguinte comando no terminal:
+
+        make
+
+    Este comando irá:
+        1. Compilar o código utilizando a versão do C++17.
+        2. Criar o executável testa_velha, que é o arquivo gerado após a compilação.
+        3. Executar os testes automatizados definidos no arquivo testa_velha.cpp.
+
+    3.	Executando os Testes
+
+    Após a compilação, os testes serão executados automaticamente. Caso queira rodar os testes manualmente, use o seguinte comando:
+
+        ./testa_velha
+
+    Este comando executa os testes definidos no arquivo testa_velha.cpp.
+
+	4.	Ferramentas de Verificação
+
+        • cppcheck: Para verificar os avisos e erros no código, utilize o comando:
+        make cppcheck
+        • gcov: Para verificar a cobertura de código, execute o comando:
+        make gcov
+
+	5.	Limpeza
+
+    Para remover arquivos temporários e objetos de compilação, use o comando:
+
+        make clean
+
+    Isso removerá arquivos como objetos .o, executáveis gerados e arquivos de cobertura de teste.
