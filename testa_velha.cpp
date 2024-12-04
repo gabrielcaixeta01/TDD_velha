@@ -43,3 +43,13 @@ TEST_CASE("Diagonal principal retorna X como vencedor", "[vencedor]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == 1);
 }
+
+// Teste diagonal secundária
+TEST_CASE("Diagonal secundária retorna O como vencedor", "[vencedor]") {
+    int tabuleiro[3][3] = {
+        {0, 0, 2},
+        {1, 2, 0},
+        {2, 1, 0}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == 2);
+}
