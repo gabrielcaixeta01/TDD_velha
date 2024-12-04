@@ -33,3 +33,13 @@ TEST_CASE("Coluna completa deve retornar X como vencedor", "[vencedor]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == 1);
 }
+
+// Teste diagonal principal
+TEST_CASE("Diagonal principal retorna X como vencedor", "[vencedor]") {
+    int tabuleiro[3][3] = {
+        {1, 0, 0},
+        {0, 1, 0},
+        {2, 2, 1}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == 1);
+}
