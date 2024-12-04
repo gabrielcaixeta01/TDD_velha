@@ -84,3 +84,12 @@ TEST_CASE("Tabuleiro parcialmente preenchido", "[indefinido]") {
     REQUIRE(VerificaVelha(tabuleiro) == -1);
 }
 
+// Teste com um X jogando mais vezes, jogo impossível
+TEST_CASE("Jogo com mais X do que O permitido", "[impossivel]") {
+    int tabuleiro[3][3] = {
+        {1, 1, 1},
+        {1, 0, 2},
+        {0, 0, 2}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == -2);
+}
