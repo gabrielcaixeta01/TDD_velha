@@ -23,3 +23,13 @@ TEST_CASE("Linha completa deve retornar X como vencedor", "[vencedor]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == 1);
 }
+
+// Teste coluna completa
+TEST_CASE("Coluna completa deve retornar X como vencedor", "[vencedor]") {
+    int tabuleiro[3][3] = {
+        {1, 2, 0},
+        {1, 0, 0},
+        {1, 0, 2}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == 1);
+}
