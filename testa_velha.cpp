@@ -63,3 +63,13 @@ TEST_CASE("Tabuleiro cheio", "[empate]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == 0);
 }
+
+// Teste com mais de um vencedor
+TEST_CASE("Dois vencedores simultâneos", "[impossivel]") {
+    int tabuleiro[3][3] = {
+        {1, 1, 1},
+        {2, 2, 2},
+        {0, 0, 0}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == -2);
+}
