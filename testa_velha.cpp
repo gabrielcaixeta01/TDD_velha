@@ -53,3 +53,13 @@ TEST_CASE("Diagonal secundária retorna O como vencedor", "[vencedor]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == 2);
 }
+
+// Teste empate, tabuleiro cheio
+TEST_CASE("Tabuleiro cheio", "[empate]") {
+    int tabuleiro[3][3] = {
+        {1, 2, 1},
+        {1, 1, 2},
+        {2, 1, 2}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == 0);
+}
