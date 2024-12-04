@@ -73,3 +73,14 @@ TEST_CASE("Dois vencedores simultâneos", "[impossivel]") {
     };
     REQUIRE(VerificaVelha(tabuleiro) == -2);
 }
+
+// Teste com jogo indefinido
+TEST_CASE("Tabuleiro parcialmente preenchido", "[indefinido]") {
+    int tabuleiro[3][3] = {
+        {1, 0, 0},
+        {0, 2, 0},
+        {0, 0, 0}
+    };
+    REQUIRE(VerificaVelha(tabuleiro) == -1);
+}
+
